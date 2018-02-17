@@ -8,15 +8,15 @@ public class CountingNumbers {
 		
        Scanner input = new Scanner(System.in);
        
-       int countPositive = 0, countNegative = 0, countZero = 0, i;
+       int countPositive = 0, countNegative = 0, countZero = 0;
        int array[] = new int[10];
 		
        System.out.print("Enter 10 Numbers: ");
         
-       for (i = 0; i < 10; i++)
+       for (int i = 0; i < 10; i++)
         	array[i] = input.nextInt();
     
-       for (i = 0; i < 10; i++) {
+       for (int i = 0; i < 10; i++) {
         	
             if (array[i] < 0)
                 countNegative++;
