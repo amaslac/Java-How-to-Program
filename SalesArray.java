@@ -17,8 +17,6 @@ Summarize the results in tabular format.*/
 
 package Examples;
 
-import java.util.Arrays;
-
 public class SalesArray {
 
 	public static void main(String[] args) {
@@ -32,13 +30,13 @@ public class SalesArray {
 
 		System.out.printf("   %s %13s %16s", "Salesperson", "Gross sales", "Week salary\n\n");
 		
-		for (int salesPerson = 0; salesPerson < sales.length; salesPerson++) {
+		for (int i = 0; i < sales.length; i++) {
 			
-			double commission = 0.09 * sales[salesPerson];
-			salary[salesPerson] = 200 + (int) commission;
+			double commission = 0.09 * sales[i];
+			salary[i] = 200 + (int) commission;
 			
 			System.out.printf("Salesperson %2d %12d$ %13d$\n", 
-					salesPerson + 1, sales[salesPerson], salary[salesPerson]);
+					i + 1, sales[i], salary[i]);
 		}
 		
 		for (int i = 0; i < salary.length; i++)
@@ -57,10 +55,10 @@ public class SalesArray {
 			return 0;
 		else if (earned <= 399)
 			return 1;
-	    else if (earned <= 499)
+		else if (earned <= 499)
 			return 2;
-	    else if (earned <= 599)
-		    return 3;
+		else if (earned <= 599)
+			return 3;
 		else if (earned <= 699)
 			return 4;
 		else if (earned <= 799)
